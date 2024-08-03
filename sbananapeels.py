@@ -147,6 +147,8 @@ def main(stdscr):
                 while True:  # Loop to handle post-game options
                     response = stdscr.getch()
                     if response in [ord('y'), ord('Y')]:
+                        MAZE = initialize_maze()  # Reset the maze
+                        score = 100  # Reset score
                         break  # Break the inner loop to restart the game
                     elif response in [ord('q'), ord('Q')]:
                         return  # Return from the function to exit
@@ -177,5 +179,3 @@ if __name__ == "__main__":
         curses.wrapper(main)
     except KeyboardInterrupt:
         sys.exit()
-
-
