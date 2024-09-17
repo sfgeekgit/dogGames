@@ -109,5 +109,6 @@ def run_race():
     else:
         print(f"Sorry, your guess was incorrect. Snail {winner} won the race.")
 
+
 if __name__ == "__main__":
     run_race()
